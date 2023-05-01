@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends "navbar.html" %}
+    <title>{% block title %}Home{% endblock %}</title>
+    <!-- <link rel="stylesheet" href="{{url_for('css', filename='index.css')}}">
+    <link rel="stylesheet" href="../css/index.css"> -->
+</head>
+
+<body>
+    {% block content %}
+    <h1>ENCRYPTION</h1>
+    <center>
+    <div class="wrapper">
+      
+      <div class="text" width="80%">
+      <p>Welcome to our encryption software website!
+        Our software is a powerful tool designed to protect your
+          sensitive data and communications from prying eyes. With our
+          software, you can encrypt your files, emails, and messages to
+            ensure that only authorized parties can access them.
+        Our encryption software uses state-of-the-art encryption
+        algorithms to scramble your data into an unreadable format,
+          making it virtually impossible for anyone without the proper decryption
+          key to decipher your information. Whether you're an individual looking
+            to secure personal data or a business protecting confidential information,
+            our encryption software is an essential tool for keeping your data safe and secure.
+              Try it today and experience the peace of mind that comes with knowing your information is protected.</p>
+      </div>
+      <!-- <div class="image">
+        <p>image</p>
+      </div> -->
+    </div>
+    <a href="{{ url_for('login') }}" class="button">Encrypt</a>
+    <a href="{{ url_for('login') }}" class="button">Decrypt</a>
+    </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
+</body>
+</html>

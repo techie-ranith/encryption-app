@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends 'navbar.html' %}
+    <title>{% block title%}Sign Up{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{url_for('css', filename='login.css')}}">
+  </head>
+
+  <body>
+    {% block content%}
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <form method='POST' action="{{url_for('register')}}">
+        <label>User Name</label>
+        <input type="text" name="username" id="username" required />
+        <label>Email</label>
+        <input type="email" name="email" id="email" required/>
+        <label>Password</label>
+        <input type="password" name="password1" id="password" required />
+        <label>Confirm Password</label>
+        <input type="password" name="password2" id="passwrod" required/>
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+      <button type="submit" name="submit" class="login_btn">Submit</button>
+      </form>
+    </div>
+    <p class="para-2">
+      Already have an account? <a href="{{url_for('login')}}">Login here</a>
+    </p>
+    {% endblock %}
+  </body>
+</html>

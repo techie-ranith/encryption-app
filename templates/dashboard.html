@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'navbar.html' %}
+    <title>{% block title %}dashboard{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <center>
+    <h1>ENCRYPTION</h1>
+    <h2>upload text file with lower case letters.</h2>
+    <form action="{{url_for('encrypt')}}" method="POST" enctype="multipart/form-data">
+        <input type="file" class="form-control" id="customFile" name="file" /><br>
+        <button type="submit" name="submit" value="upload">Submit</button>
+    </form>
+
+    <h2>
+        <p>{{ encry }}</p>
+    </h2>
+    <!-- <a href="{{ url_for('dashboard') }}" download>Download Encrypted File</a> -->
+    </center>
+
+    <center>
+        <h1>DECRYPTION</h1>
+        <h2>upload text file with lower case letters.</h2>
+        <form action="{{url_for('decrypt')}}" method="POST" enctype="multipart/form-data">
+            <input type="file" class="form-control" id="customFile" name="file" /><br>
+            <button type="submit" name="submit" value="upload">Submit</button>
+        </form>
+    
+        <h2>
+            <p>{{ encry }}</p>
+        </h2>
+        <!-- <a href="{{ url_for('dashboard') }}" download>Download Encrypted File</a> -->
+    </center>
+
+
+    {% endblock %}
+    
+</body>
+</html>
