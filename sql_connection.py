@@ -5,6 +5,6 @@ def connection():
         host = "localhost",
         user = "root",
         password = "",
-        database = "testdb1"
+        database = "encryption"
     )
     
